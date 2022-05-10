@@ -41,7 +41,6 @@ int main()
 	current2 -> data = 3;
 	current2 -> link = NULL;
 	current -> link = current2;
-	printf("Current->data: %d\n", current->data);
 	count_of_nodes(head);
 	return (0);
 }
