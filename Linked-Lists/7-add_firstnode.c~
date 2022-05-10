@@ -20,7 +20,7 @@ void print_data(struct node *head)
 		ptr = ptr -> link;
 	}
 }
-void add_node(struct node *head, int data)
+void add_lastnode(struct node *head, int data)
 {
 	struct node *ptr, *temp;
 
@@ -34,6 +34,16 @@ void add_node(struct node *head, int data)
 		ptr = ptr -> link;
 	ptr -> link = temp;
 }
+struct node* add_firstnode(struct node* head, int d)
+{
+	struct node *ptr = malloc(sizeof(struct node));
+	ptr -> data = d;
+	ptr -> link = NULL;
+
+	ptr -> link = head;
+	head = ptr;
+	return (head);
+}
 int main()
 {
 	struct node *head = NULL;
@@ -44,7 +54,7 @@ int main()
 	head -> data = 45;
 	head -> link = NULL;
 
-	current = malloc(sizeof(struct node));
+	current = (struct node*)malloc(sizeof(struct node));
 	current -> data = 98;
 	current -> link = NULL;
 	head -> link = current;
@@ -53,8 +63,12 @@ int main()
 	current2 -> data = 3;
 	current2 -> link = NULL;
 	current -> link = current2;
-	add_node(head, 67);
-	add_node(head, 82);
+
+	head -> link = ptr;
+	head = add_firstnode(head, 2);
+	ptr = head;
+	add_lastnode(head, 67);
+	add_lastnode(head, 82);
 	print_data(head);
 	return (0);
 }
