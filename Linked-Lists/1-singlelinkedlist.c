@@ -20,6 +20,7 @@ int main()
 	current -> link = NULL;
 	head -> link = current;
 	printf("%d\n", current->data);
+	printf("%d\n", head->data);
 
 	return (0);
 }
