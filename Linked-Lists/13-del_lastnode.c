@@ -16,25 +16,44 @@ void print_data(struct node *head)
 	ptr = head;
 	while (ptr != NULL)
 	{
-		printf("prt->data: %d\n", ptr->data);
+		printf("\nprt -> data: %d\n", ptr->data);
 		ptr = ptr -> link;
 	}
 }
-void add_node_at_pos(struct node *head, int data, int pos)
+
+struct node* add_firstnode(struct node* head, int d)
+{
+        struct node *ptr = malloc(sizeof(struct node));
+	ptr -> data = d;
+	ptr -> link = NULL;
+	
+	ptr -> link = head;
+	head = ptr;
+	return (head);
+}
+
+struct node* add_node_at_pos(struct node *head, int data, int pos)
 {
         struct node *ptr = head;
         struct node *ptr2 = malloc(sizeof(struct node));
 	ptr2 -> data = data;
 	ptr2 -> link = NULL;
 
-	pos--;
-	while(pos != 1)
+	if (pos == 1)
+	          add_firstnode(head, data);
+	else
 	  {
-	          ptr = ptr -> link;
-		  pos--;
+	          pos --;
+		  while(pos != 1)
+		    {
+		            ptr = ptr -> link;
+			    pos--;
+		    }
+		  ptr2 -> link = ptr -> link;
+		  ptr -> link = ptr2;
+		  
 	  }
-	ptr2 -> link = ptr -> link;
-	ptr -> link = ptr2;
+	return head;
 }
 struct node* del_lastnode(struct node* head)
 {
