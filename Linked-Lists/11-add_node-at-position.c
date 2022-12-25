@@ -41,8 +41,9 @@ struct node* add_node_at_pos(struct node *head, int data, int pos)
 
 	pos--;
 
-	if (pos is 1)
-	  add_firstnode(head, data)
+	if (pos == 0)
+	  add_firstnode(head, data);
+	
 	while(pos != 1)
 	  {
 	          ptr = ptr -> link;
@@ -74,7 +75,7 @@ int main()
 	current2 -> link = NULL;
 	current -> link = current2;
 
-	int data = 78, pos = 2;
+	int data = 78, pos = 1;
 
 	printf("Before adding %d a node at position : %d \n", data, pos);
 	print_data(head);
