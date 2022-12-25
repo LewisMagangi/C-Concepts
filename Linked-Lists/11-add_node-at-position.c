@@ -16,11 +16,23 @@ void print_data(struct node *head)
 	ptr = head;
 	while (ptr != NULL)
 	{
-		printf("prt->data: %d\n", ptr->data);
+		printf("prt->data: %d\n", ptr -> data);
 		ptr = ptr -> link;
 	}
 }
-void add_node_at_pos(struct node *head, int data, int pos)
+
+struct node* add_firstnode(struct node* head, int d)
+{
+  struct node *ptr = malloc(sizeof(struct node));
+  ptr -> data = d;
+  ptr -> link = NULL;
+
+  ptr -> link = head;
+  head = ptr;
+  return (head);
+}
+
+struct node* add_node_at_pos(struct node *head, int data, int pos)
 {
         struct node *ptr = head;
         struct node *ptr2 = malloc(sizeof(struct node));
@@ -28,6 +40,9 @@ void add_node_at_pos(struct node *head, int data, int pos)
 	ptr2 -> link = NULL;
 
 	pos--;
+
+	if (pos is 1)
+	  add_firstnode(head, data)
 	while(pos != 1)
 	  {
 	          ptr = ptr -> link;
@@ -35,13 +50,15 @@ void add_node_at_pos(struct node *head, int data, int pos)
 	  }
 	ptr2 -> link = ptr -> link;
 	ptr -> link = ptr2;
+
+	return head;
 }
 int main()
 {
         struct node *head = NULL;
         struct node *current = NULL;
 	struct node *current2 = NULL;
-	struct node *ptr = NULL;
+       	struct node *ptr = NULL;
 
 	head = (struct node*)malloc(sizeof(struct node));
 	head -> data = 45;
@@ -62,16 +79,10 @@ int main()
 	printf("Before adding %d a node at position : %d \n", data, pos);
 	print_data(head);
 
-	add_node_at_pos(head, data, pos);
+	head = add_node_at_pos(head, data, pos);
+	
 	printf("After adding %d a node at position : %d \n", data, pos);
 	print_data(head);
 
-	//while (ptr != NULL)
-	//{
-	//printf("prt -> data: %d\n", ptr -> data);
-		  //	  ptr = ptr -> link;
-	//}
-	
-	//	print_data(head);
 	return (0);
 }
