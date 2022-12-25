@@ -39,20 +39,20 @@ struct node* add_node_at_pos(struct node *head, int data, int pos)
 	ptr2 -> data = data;
 	ptr2 -> link = NULL;
 
-	pos--;
-
-	if (pos == 0)
-	  add_firstnode(head, data);
-	
-	while(pos != 1)
+	if (pos == 1)
+	          add_firstnode(head, data);
+	else
 	  {
-	          ptr = ptr -> link;
-		  pos--;
+	          while(pos != 1)
+		    {
+		            ptr = ptr -> link;
+			    pos--;
+		    }
+		  ptr2 -> link = ptr -> link;
+		  ptr -> link = ptr2;
+		  
+		  return head;
 	  }
-	ptr2 -> link = ptr -> link;
-	ptr -> link = ptr2;
-
-	return head;
 }
 int main()
 {
