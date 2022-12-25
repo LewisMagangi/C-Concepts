@@ -23,13 +23,13 @@ void print_data(struct node *head)
 
 struct node* add_firstnode(struct node* head, int d)
 {
-  struct node *ptr = malloc(sizeof(struct node));
-  ptr -> data = d;
-  ptr -> link = NULL;
-
-  ptr -> link = head;
-  head = ptr;
-  return (head);
+       struct node *ptr = malloc(sizeof(struct node));
+       ptr -> data = d;
+       ptr -> link = NULL;
+       
+       ptr -> link = head;
+       head = ptr;
+       return (head);
 }
 
 struct node* add_node_at_pos(struct node *head, int data, int pos)
@@ -43,6 +43,7 @@ struct node* add_node_at_pos(struct node *head, int data, int pos)
 	          add_firstnode(head, data);
 	else
 	  {
+	          pos --;
 	          while(pos != 1)
 		    {
 		            ptr = ptr -> link;
