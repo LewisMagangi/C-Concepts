@@ -72,7 +72,7 @@ int main()
 	current2 -> link = NULL;
 	current -> link = current2;
 
-	int data = 69, pos = 2;
+	int data = 69, pos = 1;
 	add_node_at_pos(head, data, pos);
 
 	while (ptr != NULL)

@@ -57,15 +57,21 @@ int main()
 	current2 -> link = NULL;
 	current -> link = current2;
 
-	int data = 69, pos = 2;
-	add_node_at_pos(head, data, pos);
+	int data = 78, pos = 2;
 
-	while (ptr != NULL)
-	  {
-	          printf("prt -> data: %d\n", ptr -> data);
-		  ptr = ptr -> link;
-	  }
-	
+	printf("Before adding %d a node at position : %d \n", data, pos);
 	print_data(head);
+
+	add_node_at_pos(head, data, pos);
+	printf("After adding %d a node at position : %d \n", data, pos);
+	print_data(head);
+
+	//while (ptr != NULL)
+	//{
+	//printf("prt -> data: %d\n", ptr -> data);
+		  //	  ptr = ptr -> link;
+	//}
+	
+	//	print_data(head);
 	return (0);
 }

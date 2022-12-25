@@ -99,5 +99,10 @@ int main()
 
 	printf("After inserting a node at the end of the linked list : \n");
 	print_data(head);
+
+	head = insertnode_after_position(head, 245, 1);
+	printf("After inserting a node after the first node of the linked list : \n");
+	print_data(head);
+	
 	return (0);
 }
