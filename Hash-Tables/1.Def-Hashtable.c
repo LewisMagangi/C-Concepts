@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Ht_item Ht_item;
+
+// Define the Hash Table Item here
+struct Ht_item {
+  char* key;
+  char* value;
+};
+
+typedef struct HashTable HashTable;
+
+// Define the Hash Table here
+struct HashTable {
+        // Contains an array of pointers
+        // to items
+        Ht_item** items;
+        int size;
+        int count;
+};
+
+int main()
+{
+        return 0;
+}
