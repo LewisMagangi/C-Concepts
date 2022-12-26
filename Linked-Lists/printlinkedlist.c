@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
+#include "linkedlist.h"
 
 void print_data(struct node *head)
 {

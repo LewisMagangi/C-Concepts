@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-struct node {
-	int data;
-	struct node *link;
-};
+#include "linkedlist.h"
 
 void count_of_nodes(struct node *head)
 {
@@ -22,6 +18,7 @@ void count_of_nodes(struct node *head)
 	}
 	printf("No of nodes: %d\n", count);
 }
+
 int main()
 {
 	struct node *head = NULL;
