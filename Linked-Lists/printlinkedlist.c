@@ -15,4 +15,4 @@ void print_data(struct node *head)
 	          printf("prt->data: %d\n", ptr -> data);
 	          ptr = ptr -> link;
 	  }
-}
+} 
