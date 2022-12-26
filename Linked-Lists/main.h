@@ -1,6 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <stdio.h>
 
-void print_data(struct node *head)
-
+struct node {
+  int data;
+  struct node *link;
+}
+  
+typedef struct node node_t;
+void print_data(struct node *head);
+  
 #endif /* MAIN_H */

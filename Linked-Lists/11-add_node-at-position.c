@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,6 +7,8 @@ struct node {
 	struct node *link;
 };
 
+
+/*
 void print_data(struct node *head)
 {
 	struct node *ptr;
@@ -20,6 +23,7 @@ void print_data(struct node *head)
 		ptr = ptr -> link;
 	}
 }
+*/
 
 struct node* add_firstnode(struct node* head, int d)
 {
