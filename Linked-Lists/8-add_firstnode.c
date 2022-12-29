@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "linkedlist.h"
 
-node_t* add_firstnode(node_t **head, int d)
+node_t* add_firstnode2(node_t **head, int d)
 {
 	node_t *ptr = malloc(sizeof(node_t));
 	ptr -> data = d;
@@ -37,11 +37,11 @@ int main()
 	printf("Before adding a node at the linked list : ");
 	print_data(head);
   
-	head = add_firstnode(&head, 67);
+	head = add_firstnode2(&head, 67);
 	printf("After adding a first node at the linked list : ");
 	print_data(head);
 
-	head = add_firstnode(&head, 82);
+	head = add_firstnode2(&head, 82);
 	printf("After adding another first node at the linked list : ");
 	print_data(head);
 

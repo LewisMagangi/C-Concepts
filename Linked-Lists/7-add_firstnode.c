@@ -13,6 +13,7 @@ node_t* add_firstnode(node_t* head, int d)
 	return (head);
 }
 
+/*
 int main()
 {
         node_t *head = NULL;
@@ -46,3 +47,4 @@ int main()
 
 	return (0);
 }
+*/
