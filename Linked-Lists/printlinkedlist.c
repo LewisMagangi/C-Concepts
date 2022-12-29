@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include "linkedlist.h"
 
-void print_data(struct node *head)
+void print_data(node_t *head)
 {
-        struct node *ptr;
+        node_t *ptr;
 
 	if (head == NULL)
 	          printf("Linked List is empty");
@@ -12,7 +12,7 @@ void print_data(struct node *head)
 	ptr = head;
 	while (ptr != NULL)
 	  {
-	          printf("prt->data: %d\n", ptr -> data);
+	          printf("prt -> data: %d\n", ptr -> data);
 	          ptr = ptr -> link;
 	  }
 } 
