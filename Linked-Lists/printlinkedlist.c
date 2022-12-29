@@ -7,7 +7,7 @@ void print_data(node_t *head)
 	node_t *ptr;
 
 	if (head == NULL)
-		printf("Linked List is empty");
+		printf("Linked List is empty \n");
 	ptr = NULL;
 	ptr = head;
 	while (ptr != NULL)
