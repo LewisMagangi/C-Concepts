@@ -1,27 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-struct node {
-	int data;
-	struct node *link;
-};
+#include "linkedlist.h"
 
 int main()
 {
-	struct node *head = NULL;
-	struct node *current = NULL;
-	struct node *current2 = NULL;
+	node_t *head = NULL;
+	node_t *current = NULL;
+	node_t *current2 = NULL;
 
-	head = (struct node*)malloc(sizeof(struct node));
+	head = (node_t*)malloc(sizeof(node_t));
 	head -> data = 45;
 	head -> link = NULL;
 
-	current = malloc(sizeof(struct node));
+	current = malloc(sizeof(node_t));
 	current -> data = 98;
 	current -> link = NULL;
 	head -> link = current;
 
-	current2 = (struct node*)malloc(sizeof(struct node));
+	current2 = (node_t*)malloc(sizeof(node_t));
 	current2 -> data = 3;
 	current2 -> link = NULL;
 
