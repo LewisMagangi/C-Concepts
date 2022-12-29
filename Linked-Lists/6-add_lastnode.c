@@ -1,31 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "linkedlist.h"
 
-struct node {
-	int data;
-	struct node *link;
-};
-
-void print_data(struct node *head)
+void add_lastnode(node_t *head, int data)
 {
-	struct node *ptr;
-
-	if (head == NULL)
-		printf("Linked List is empty");
-	ptr = NULL;
-	ptr = head;
-	while (ptr != NULL)
-	{
-		printf("prt->data: %d\n", ptr->data);
-		ptr = ptr -> link;
-	}
-}
-void add_lastnode(struct node *head, int data)
-{
-	struct node *ptr, *temp;
+	node_t *ptr, *temp;
 
 	ptr = head;
-	temp = (struct node*)malloc(sizeof(struct node));
+	temp = (node_t*)malloc(sizeof(node_t));
 
 	temp -> data = data;
 	temp -> link = NULL;
@@ -36,20 +18,20 @@ void add_lastnode(struct node *head, int data)
 }
 int main()
 {
-	struct node *head = NULL;
-	struct node *current = NULL;
-	struct node *current2 = NULL;
+	node_t *head = NULL;
+	node_t *current = NULL;
+	node_t *current2 = NULL;
 
-	head = (struct node*)malloc(sizeof(struct node));
+	head = (node_t*)malloc(sizeof(node_t));
 	head -> data = 45;
 	head -> link = NULL;
 
-	current = malloc(sizeof(struct node));
+	current = malloc(sizeof(node_t));
 	current -> data = 98;
 	current -> link = NULL;
 	head -> link = current;
 
-	current2 = (struct node*)malloc(sizeof(struct node));
+	current2 = (node_t*)malloc(sizeof(node_t));
 	current2 -> data = 3;
 	current2 -> link = NULL;
 	current -> link = current2;
