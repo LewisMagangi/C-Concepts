@@ -28,21 +28,21 @@ node_t* del_lastnode(node_t* head)
 }
 int main()
 {
-        struct node *head = NULL;
-        struct node *current = NULL;
-	struct node *current2 = NULL;
-	struct node *ptr = NULL;
+        node_t *head = NULL;
+        node_t *current = NULL;
+	node_t *current2 = NULL;
+	node_t *ptr = NULL;
 
-	head = (struct node*)malloc(sizeof(struct node));
+	head = (node_t*)malloc(sizeof(node_t));
 	head -> data = 972;
 	head -> link = NULL;
 
-	current = (struct node*)malloc(sizeof(struct node));
-	current -> data = 084;
+	current = (node_t*)malloc(sizeof(node_t));
+	current -> data = 684;
 	current -> link = NULL;
 	head -> link = current;
 
-	current2 = (struct node*)malloc(sizeof(struct node));
+	current2 = (node_t*)malloc(sizeof(node_t));
 	current2 -> data = 869;
 	current2 -> link = NULL;
 	current -> link = current2;
