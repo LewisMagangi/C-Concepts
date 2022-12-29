@@ -35,8 +35,17 @@ int main()
 	current2 -> data = 3;
 	current2 -> link = NULL;
 	current -> link = current2;
-	add_lastnode(head, 67);
-	add_lastnode(head, 82);
+
+	printf("Before adding a node at the linked list : ");
 	print_data(head);
+
+	add_lastnode(head, 67);
+	printf("After adding a node at the linked list : ");
+	print_data(head);
+	
+	add_lastnode(head, 82);
+	printf("After adding another node at the linked list : ");
+	print_data(head);
+	
 	return (0);
 }
