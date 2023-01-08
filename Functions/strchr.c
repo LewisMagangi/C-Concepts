@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h> // use string.h header file
+
+int main ()
+{
+
+        const char *s = "javatpoint"; // initialization of the constant char pointer
+        char ch; // declare a ch variable
+
+        printf (" Original string: \"%s\" \n ", s); // print the string
+
+        // take a character from the user
+        printf ("Please enter a character you want to search in the string: ");
+        scanf (" %c", &ch);
+
+        // it checks whether the specified character exists in the string
+        if ( strchr (s, ch) != NULL )
+        {
+                    printf (" \n '%c' is found in \"%s\" \n", ch, s);
+                    }
+        // if the character is not found, the below statement is executed
+        else
+            printf (" \n '%c' is not found in \"%s\" \n", ch, s);
+
+        return 0;
+    }  
